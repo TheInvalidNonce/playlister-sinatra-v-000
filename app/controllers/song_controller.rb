@@ -1,4 +1,5 @@
 require 'rack-flash'
+require 'rack/flash/test'
 class SongController < ApplicationController
 
   # This should present the user with a list of all songs in the library.
@@ -19,7 +20,6 @@ class SongController < ApplicationController
     song = Song.create(name: params[:song][:name], artist: artist)
     song.genre_ids = params[:song][:genres]
     song.save
-    redirect to "/songs/#{song.slug}"
     flash[:message] = "Sucessfully created song."
   end
 
