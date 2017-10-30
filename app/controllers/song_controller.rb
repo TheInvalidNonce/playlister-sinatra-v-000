@@ -5,7 +5,7 @@ class SongController < ApplicationController
   # Each song should be a clickable link to that particular song's show page.
   get '/songs' do
     @songs = Song.all
-    erb :'/songs/index'
+    erb :'songs/index'
   end
 
   # Display the new song form with selectable genres
