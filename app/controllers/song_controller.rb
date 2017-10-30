@@ -1,3 +1,4 @@
+require 'rack-flash'
 class SongController < ApplicationController
 
   # This should present the user with a list of all songs in the library.
